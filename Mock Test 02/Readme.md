@@ -20,6 +20,8 @@ Execution context is a fundamental concept in JavaScript that helps us understan
 3. `"this" value`: It refers to the context in which a function is called and provides access to the object on which a method is being invoked. The value of "this" is determined based on how a function is called. It can vary depending on the function invocation context, such as whether it is a regular function call, a method call, or an event handler.
 
 `DIAGRAM AND EXPLAINATION`
+![execution context](https://github.com/00123nikhil/PPT-Program_062023/assets/95076182/49d70bf5-2af4-4c6c-bbb8-61612c50e621)
+
 
 
 In the diagram,  an Execution Context with the Variable Environment and the Lexical Environment. Each environment contains the Environment Record, which stores the variables and function declarations, and the Outer Environment Reference or Outer Lexical Environment Reference, which refers to the parent or outer scope's environment. The "this" value is also a part of the Execution Context, representing the context in which a function is called.
