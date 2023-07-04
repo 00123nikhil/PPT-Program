@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question4</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-family: "Roboto", sans-serif;
+        justify-content: space-between;
+      }
+
+      body {
+        height: 100vh;
+        /* width: 100vw; */
+      }
+
+      .logo img {
+        color: black;
+        /* border: 1px solid red; */
+        height: 50px;
+        margin-right: 20px;
+      }
+
+      /* !Nav */
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 12px;
+      }
+
+      .header {
+        display: flex;
+        /* justify-content: space-between; */
+      }
+
+      nav ul {
+        display: flex;
+        gap: 40px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+      }
+
+      li {
+        list-style-type: none;
+        font-weight: 700;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+      }
+      .blanknav {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding-block: 2px;
+      }
+      .blanknav p {
+        text-align: center;
+        /* padding: 10px; */
+        font-size: 12px;
+      }
+
+      .btn1 {
+        padding: 10px 35px;
+        background-color: yellow;
+        color: black;
+        font-weight: 700;
+        border-radius: 30px;
+      }
+      .leftnav {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        gap: 20px;
+      }
+
+      /* Main Section started */
+      .Main {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* margin: 10px; */
+        padding: 20px;
+      }
+
+      .left-Main {
+        margin-inline: 50px;
+        width: 50%;
+      }
+      .left-Main h2 {
+        font-size: 40px;
+        letter-spacing: 1.5px;
+      }
+
+      p {
+        margin: 15px 0;
+        color: grey;
+      }
+
+      .btn2 {
+        /* padding: 10px 40px; */
+        /* margin: 15px; */
+        padding: 15px 45px;
+        background-color: #432c59;
+        color: white;
+        font-weight: 700;
+        border: none;
+        border-radius: 08px;
+      }
+
+      /* !Right Main section  */
+      .right-Main {
+        width: 50%;
+      }
+      .right-Main img {
+        /* border: 2px solid red; */
+        width: 100%;
+        height: 460px;
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+      }
+
+      section p {
+        font-size: 10px;
+        color: white;
+      }
+      section div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+      }
+      section div p {
+        border: 2px solid white;
+        padding: 10px 20px;
+      }
+      i {
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="blanknav">
+      <p>save 75% for 12 months.limited time offer!</p>
+    </div>
+    <!-- navbar  -->
+    <nav>
+      <div class="header">
+        <!-- navigation -->
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Inspiration</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="logo"><img src="./s1.png" alt="" /></div>
+
+      <!-- button contact us -->
+      <div class="leftnav">
+        <span>Sales:+1(800)315-5939</span>
+        <span><i class="fa-solid fa-globe"></i>EN</span>
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <button class="btn1">Login</button>
+        <button class="btn1">SignUp</button>
+      </div>
+    </nav>
+
+    <!-- Main Section started here -->
+    <div class="Main">
+      <div class="left-Main">
+        <h2>
+          Create must click landing <br />
+          page
+        </h2>
+
+        <!-- Paragraph -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sint
+          magni provident voluptas. Laborum vel, sed ullam illum dignissimos,
+          corporis, assumenda soluta autem accusamus rerum magni eaque possimus
+          optio nihil.
+        </p>
+
+        <!-- button -->
+        <button class="btn1">Sign Up</button>
+      </div>
+
+      <!-- right Main -->
+
+      <div class="right-Main">
+        <img src="./Images/Question4.jpg" alt="" />
+      </div>
+    </div>
+    <!-- section -->
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        ipsa Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
+        veniam similique vel, labore quibusdam magnam quasi aut reiciendis porro
+        <br />
+        quod consequatur consectetur aliquam corporis eaque esse et modi quos
+        hic.
+      </p>
+      <div>
+        <p>Customise cookies</p>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </section>
+  </body>
+</html>

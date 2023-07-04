@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question2</title>
+    <style>
+      body {
+        background-color: rgb(39, 36, 36);
+        color: white;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      h2 {
+        background-color: greenyellow;
+        padding: 10px;
+        color: black;
+        text-align: center;
+      }
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        border: 3px solid white;
+        padding: 20px 15px;
+      }
+
+      div {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: inline-block;
+        width: 120px;
+      }
+      input {
+        border: 2px solid;
+        background-color: ghostwhite;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      input[type="submit"] {
+        margin-top: 10px;
+      }
+
+      input:invalid {
+        border-color: red;
+      }
+
+      input:valid {
+        border-color: green;
+      }
+      button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>MOCK TEST | Question 2 | Basic Valdiation form</h2>
+    <form id="myForm" onsubmit="validateForm(event)">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+      </div>
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}" required />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="18" max="99" required />
+      </div>
+      <div>
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="" disabled selected>Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+      </div>
+      <div>
+        <label for="color">Color:</label>
+        <input type="color" id="color" required />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        var age = document.getElementById("age").value;
+        var gender = document.getElementById("gender").value;
+        var date = document.getElementById("date").value;
+        var color = document.getElementById("color").value;
+
+        if (
+          !name ||
+          !email ||
+          !phone ||
+          !password ||
+          !age ||
+          !gender ||
+          !date ||
+          !color
+        ) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        if (!isValidEmail(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        if (!isValidPhone(phone)) {
+          alert("Please enter a valid phone number.");
+          return;
+        }
+        document.getElementById("myForm").submit();
+      }
+
+      function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function isValidPhone(phone) {
+        var phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phone);
+      }
+    </script>
+  </body>
+</html>
