@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive Layout Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: rgb(10, 10, 53);
+        color: #fff;
+        padding: 20px;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      section {
+        margin-bottom: 20px;
+        background-color: crimson;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: white;
+      }
+
+      footer {
+        background-color: rgb(10, 10, 53);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Mobile */
+      @media screen and (max-width: 767px) {
+        header {
+          text-align: center;
+        }
+
+        nav ul li {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+
+      /* Tablet */
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        header {
+          text-align: center;
+        }
+
+        nav ul li {
+          display: inline;
+          margin-right: 15px;
+        }
+      }
+
+      /* Desktop */
+      @media screen and (min-width: 1024px) {
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        nav ul li {
+          display: inline;
+          margin-right: 20px;
+        }
+
+        .content {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Web Development Assignment 2</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <section>
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor, sit amet consectetur adipisicing elit. Dolor nihil asperiores
+          reprehenderit ab cumque nulla porro, sed beatae sit vero pariatur
+          maxime ad et temporibus amet natus, optio praesentium exercitationem.
+        </p>
+      </section>
+
+      <section>
+        <h2>Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Vitae nemo quae deserunt
+          rem in repudiandae voluptatum, quasi blanditiis commodi ratione.
+          Veritatis tempora ut reiciendis accusamus. Tenetur optio quae animi
+          molestias? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quis nihil est, officia rerum dolor consequuntur blanditiis eaque
+          delectus voluptatem molestiae hic molestias exercitationem sapiente
+          eligendi quasi voluptas placeat quae vero!
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Fugiat eius eaque,
+          mollitia nobis omnis est quidem quo, facere a autem repudiandae
+          repellendus numquam perspiciatis. Iste amet esse tempora
+          exercitationem temporibus? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Ipsam vel praesentium, repellendus incidunt
+          voluptatum, ratione iure, architecto fugiat eius impedit ex qui
+          quibusdam similique officia modi totam dolorem! Quam, provident.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; Pw skill Assignment 2 | Web Development</p>
+    </footer>
+  </body>
+</html>
