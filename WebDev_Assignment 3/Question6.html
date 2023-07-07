@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Question 6 | Web Dev Assignment</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #fff;
+      }
+
+      header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+      }
+
+      nav i {
+        font-size: 35px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+      }
+      nav button {
+        padding: 10px 30px;
+        border-radius: 5px;
+        background-color: #0093f7;
+        color: white;
+        border: none;
+      }
+
+      main {
+        padding: 20px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+      }
+
+      section {
+        margin-bottom: 20px;
+      }
+
+      .hero {
+        text-align: center;
+      }
+      .imageAction {
+        display: flex;
+        margin: 0 auto;
+        height: 500px;
+        justify-content: center;
+      }
+
+      .hero img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .cta {
+        max-width: 500px;
+        font-weight: 500;
+      }
+      span{
+        display: block;
+        font-size: 24px;
+      }
+      .cta img{
+        /* width: 15rem; */
+        height: 100px;
+      }
+      .heading{
+        display: inline-block;
+      }
+      .cta .heading {
+        color:#0093f7;
+        font-size: 60px;
+        font-weight: 700;
+      }
+      .cta .brandNames{
+        color: #0093f7;
+        font-weight: 500;
+        font-size: 20px;
+      }
+      
+      .cta p {
+        color: rgb(59, 21, 21);
+        font-weight: 400;
+        font-size: 18px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .cta a {
+        background-color: #0093f7;
+        border: none;
+        font-size: 15px;
+        padding: 10px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+      }
+      .cta a i {
+        margin-left: 10px;
+      }
+
+      footer {
+        padding: 20px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 650px) {
+        main {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fa-brands fa-buysellads"></i>
+        </div>
+        <div class="menu">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <button>Login</button>
+      </nav>
+    </header>
+    <main>
+      <section class="cta">
+        <span>Say Hi To</span>
+        <span class="heading">One Card</span>
+        <p class="brandNames">Co-branded Card Issuers :</p>
+        <img src="./Assets/Brands.png" alt="">
+        <p>
+          India's best Web Designing Platform. Built with full-stack tech.
+          <br />
+          Backed by the principles of simplicity, transparency, and giving back
+          control to the user.
+        </p>
+        <a href="#"
+          >Sign Up <i class="fa-solid fa-globe"></i>
+          <i class="fa-brands fa-google-play"></i>
+          <i class="fa-brands fa-apple"></i
+        ></a>
+      </section>
+
+      <section class="hero">
+        <div class="imageAction">
+          <video src="./Assets/OneCard.mp4" muted autoplay loop></video>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © 2023 NikhilBorse.co Ltd</p>
+    </footer>
+  </body>
+</html>

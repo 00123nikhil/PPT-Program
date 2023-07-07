@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question7 Web Development Assignment 3</title>
+    <style>
+      h1 {
+        background-color: #0093f7;
+        color: black;
+        padding: 10px;
+        text-align: center;
+      }
+      .gallery {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      div p {
+        background-color: black;
+        color: white;
+        padding: 15px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .gallery {
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Web Development Assignment 3| Question 7</h1>
+    <div class="gallery">
+      <img src="./Assets/Q7.jpg" alt="Image 1" />
+      <img src="./Assets/Q7.jpg" alt="Image 2" />
+      <img src="./Assets/Q7.jpg" alt="Image 3" />
+      <img src="./Assets/Q7.jpg" alt="Image 4" />
+      <img src="./Assets/Q7.jpg" alt="Image 5" />
+      <img src="./Assets/Q7.jpg" alt="Image 6" />
+    </div>
+
+    <!-- <div>
+      <h2>Question</h2>
+      <p>
+        You are tasked with building a webpage that displays an image gallery
+        using a grid layout. The challenge is to ensure the gallery is visually
+        appealing and functional on both large and small screens. On large
+        screens, the gallery should display multiple images per row, while on
+        small screens, it should collapse into a single column for optimal
+        viewing. Refer to the attached images for visual reference. Implement
+        this using CSS Grid and media queries for responsiveness.
+      </p>
+    </div> -->
+  </body>
+</html>
