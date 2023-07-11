@@ -1,0 +1,48 @@
+<!-- DOM Manipulation: Create a page with a square box of size 300x300 on the page which will be red initially, upon clicking the red box it should change the color to yellow and the size should be doubled -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 01</title>
+  </head>
+  <style>
+    body {
+      background-color: #333;
+      color: white;
+    }
+    #box {
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      border-radius: 50%;
+    }
+    p {
+      border: 2px solid red;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <p>
+      DOM Manipulation: Create a page with a square box of size 300x300 on the
+      page which will be red initially, upon clicking the red box it should
+      change the color to yellow and the size should be doubled
+    </p>
+    <div id="box"></div>
+
+    <script>
+      var box = document.getElementById("box");
+      var isClicked = false;
+
+      box.addEventListener("click", function () {
+        if (!isClicked) {
+          box.style.backgroundColor = "yellow";
+          box.style.width = "500px";
+          box.style.height = "500px";
+          isClicked = true;
+        }
+      });
+    </script>
+  </body>
+</html>

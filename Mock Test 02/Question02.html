@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question02</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        background-color: #333;
+        color: white;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #output {
+        margin-top: 20px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Input Type result App</h1>
+      <input type="text" id="inputText" placeholder="Type something" />
+      <button onclick="addItem()">Submit</button>
+      <div id="output"></div>
+    </div>
+
+    <script>
+      function addItem() {
+        var input = document.getElementById("inputText");
+        var value = input.value.trim();
+        if (value !== "") {
+          var output = document.getElementById("output");
+          var newItem = document.createElement("p");
+          newItem.textContent = value;
+          output.appendChild(newItem);
+          input.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

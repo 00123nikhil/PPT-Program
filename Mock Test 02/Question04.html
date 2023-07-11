@@ -1,0 +1,109 @@
+<!-- 4. Build a responsive Navbar, on smaller screens it should be a hamburger menu which on click should reveal the menu items nicely, and on larger screens they should be displayed directly on the screen. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #333;
+      }
+
+      .navbar {
+        background-color: black;
+        color: #fff;
+        padding: 08px;
+        font-size: 19px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar .logo {
+        width: 3rem;
+        border-radius: 100rem;
+        cursor: pointer;
+      }
+
+      .navbar .menu {
+        display: block;
+        border: 2px solid white;
+        border-radius: 5px;
+      }
+
+      .navbar .menu-item {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+      }
+
+      a:hover {
+        background-color: green;
+      }
+      .hamburger-menu {
+        display: none;
+        cursor: pointer;
+      }
+
+      .hamburger-menu .bar {
+        width: 25px;
+        height: 5px;
+        background-color: #fff;
+        margin: 5px 0;
+      }
+
+      @media (max-width: 768px) {
+        .navbar .menu {
+          display: none;
+        }
+
+        .navbar.responsive .menu {
+          display: block;
+        }
+
+        .navbar .menu-item {
+          display: block;
+          margin: 10px 0;
+        }
+
+        .hamburger-menu {
+          display: block;
+        }
+      }
+    </style>
+    <title>Question 4</title>
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <img class="logo" src="./dish-1.png" />
+      <div class="menu" id="menu">
+        <a class="menu-item" href="#">Home</a>
+        <a class="menu-item" href="#">About</a>
+        <a class="menu-item" href="#">Services</a>
+        <a class="menu-item" href="#">Contact</a>
+      </div>
+      <div class="hamburger-menu" id="hamburgerMenu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("responsive");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
