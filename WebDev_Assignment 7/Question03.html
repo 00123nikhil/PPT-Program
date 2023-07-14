@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: rgb(71, 71, 230);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .clock {
+        font-family: "Arial", sans-serif;
+        font-size: 48px;
+        color: white;
+        text-align: center;
+        background-color: rgb(28, 28, 100);
+        width: 300px;
+        padding: 10px 30px;
+        border-radius: 5px;
+      }
+      #format {
+        font-size: 8rem;
+        font-family: "Arial", sans-serif;
+        color: rgb(36, 36, 205);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="format">PW SKILLS</h1>
+    <h1 id="clock" class="clock"></h1>
+
+    <script>
+      function updateClock() {
+        const clockElement = document.getElementById("clock");
+
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
+        const minutes = currentTime.getMinutes();
+        const seconds = currentTime.getSeconds();
+
+        const timeString =
+          formatTime(hours) +
+          ":" +
+          formatTime(minutes) +
+          ":" +
+          formatTime(seconds);
+        clockElement.textContent = timeString;
+
+        setTimeout(updateClock, 1000);
+      }
+
+      function formatTime(time) {
+        return time < 10 ? "0" + time : time;
+      }
+      updateClock();
+    </script>
+  </body>
+</html>

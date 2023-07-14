@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AQ07 Live Preview</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* height: 100vh; */
+      }
+
+      .form {
+        text-align: center;
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        padding: 10px 30px;
+      }
+
+      .form input[type="text"],
+      .form textarea {
+        width: 300px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 2px solid blue;
+      }
+      button {
+        padding: 10px 30px;
+        font-weight: 600;
+        background-color: rgb(0, 166, 255);
+        color: black;
+        border: 2px solid blue;
+        border-radius: 5px;
+      }
+
+      .preview {
+        text-align: center;
+        background-color: aliceblue;
+        color: black;
+        padding: 10px 30px;
+        border-radius: 10px;
+      }
+
+      .preview img {
+        max-width: 200px;
+        max-height: 200px;
+        margin-bottom: 10px;
+      }
+      #previewAuthor {
+        background-color: rgb(17, 17, 81);
+        color: white;
+        padding: 5px;
+      }
+      #previewImage {
+        max-width: 200px;
+        max-height: 200px;
+        margin-bottom: 10px;
+      }
+      #previewMessage {
+        width: 200px;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h2>Form Section</h2>
+        <input type="text" id="titleInput" placeholder="Title" />
+        <br />
+        <input type="text" id="imageInput" placeholder="Image URL" />
+        <br />
+        <input type="text" id="authorInput" placeholder="Author Name" />
+        <br />
+        <input type="text" id="categoryInput" placeholder="Category" />
+        <br />
+        <textarea id="messageInput" placeholder="Message"></textarea>
+        <br />
+
+        <button onclick="updatePreview()">Submit</button>
+      </div>
+      <div class="preview">
+        <h2>Live Preview Section</h2>
+        <div id="previewTitle"></div>
+        <img id="previewImage" />
+        <div id="previewCategory"></div>
+        <div id="previewMessage"></div>
+        <div id="previewAuthor"></div>
+      </div>
+    </div>
+
+    <script>
+      function updatePreview() {
+        var title = document.getElementById("titleInput").value;
+        var image = document.getElementById("imageInput").value;
+        var author = document.getElementById("authorInput").value;
+        var category = document.getElementById("categoryInput").value;
+        var message = document.getElementById("messageInput").value;
+
+        document.getElementById("previewTitle").textContent = title;
+        previewTitle.style.fontWeight = "700";
+        document.getElementById("previewImage").src = image;
+        document.getElementById("previewCategory").textContent = category;
+        document.getElementById("previewMessage").textContent = message;
+        document.getElementById("previewAuthor").textContent =
+          "Written By " + author;
+      }
+    </script>
+  </body>
+</html>

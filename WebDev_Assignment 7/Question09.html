@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AQ09 Todo App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      input[type="text"] {
+        width: 300px;
+        padding: 8px;
+      }
+
+      button {
+        padding: 8px 20px;
+        margin-top: 10px;
+        background-color: greenyellow;
+        color: black;
+        border: 2px solid white;
+        border-radius: 5px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 5px;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Todo App</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button id="addButton">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+      const taskInput = document.getElementById("taskInput");
+      const addButton = document.getElementById("addButton");
+      const taskList = document.getElementById("taskList");
+
+      function updateStatus(listItem) {
+        listItem.classList.toggle("completed");
+      }
+
+      function deleteTodoItem(listItem) {
+        listItem.remove();
+      }
+
+      addButton.addEventListener("click", function () {
+        const taskText = taskInput.value;
+
+        if (taskText.trim() === "") {
+          alert("Please enter a task.");
+          return;
+        }
+
+        const listItem = document.createElement("li");
+        listItem.innerText = taskText;
+
+        const editButton = document.createElement("button");
+        editButton.innerText = "Edit";
+        const removeButton = document.createElement("button");
+        removeButton.innerText = "Remove";
+        const updateStatusButton = document.createElement("button");
+        updateStatusButton.innerText = "Update Status";
+        const deleteTodoButton = document.createElement("button");
+        deleteTodoButton.innerText = "Delete Todo";
+
+        editButton.addEventListener("click", function () {
+          const newTaskText = prompt("Enter the new task text:", taskText);
+          if (newTaskText !== null) {
+            listItem.innerText = newTaskText;
+          }
+        });
+
+        removeButton.addEventListener("click", function () {
+          deleteTodoItem(listItem);
+        });
+
+        updateStatusButton.addEventListener("click", function () {
+          updateStatus(listItem);
+        });
+
+        deleteTodoButton.addEventListener("click", function () {
+          deleteTodoItem(listItem);
+        });
+
+        listItem.appendChild(editButton);
+        listItem.appendChild(removeButton);
+        listItem.appendChild(updateStatusButton);
+        listItem.appendChild(deleteTodoButton);
+
+        taskList.appendChild(listItem);
+
+        taskInput.value = "";
+      });
+    </script>
+  </body>
+</html>
